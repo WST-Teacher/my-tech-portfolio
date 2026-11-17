@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Shared header/footer live in `src/routes/__root.tsx` around `<Outlet />`; each page is its own route file so every page has its own metadata.
+- Bento tile styles (`bento`, `bento-*` tone utilities) are defined once in `src/styles.css`; pages compose them instead of ad hoc colors.
