@@ -1,6 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
-
 import sprig from "@/assets/flower-sprig.png";
 
 export const Route = createFileRoute("/projects")({
@@ -79,16 +77,15 @@ function Projects() {
       {projects.map((p, i) => (
         <article
           key={p.title}
-          className={`bento bento-hover animate-rise group flex min-h-52 flex-col justify-between ${p.tone} ${p.span}`}
+          className={`bento animate-rise flex min-h-52 flex-col justify-between ${p.tone} ${p.span}`}
           style={{ animationDelay: `${80 + i * 60}ms` }}
         >
-          <div className="flex items-start justify-between">
+          <div>
             <span
               className={`eyebrow ${p.tone === "bento-violet" ? "opacity-80" : "text-violet"}`}
             >
               {p.tag}
             </span>
-            <ArrowUpRight className="size-5 opacity-60 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </div>
           <div>
             <h2
